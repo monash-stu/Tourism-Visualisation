@@ -1,16 +1,19 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
     "data": {
         "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/data/total-visitors-trend.csv",
         "format": {"type": "csv"}
     },
     "mark": "line",
     "encoding": {
-      "x": {
+    "x": {
         "field": "Date",
         "type": "temporal",
+        "timeUnit": "yearmonth",
         "title": "Date"
-      },
+    },
       "y": {
         "field": "Visitors",
         "type": "quantitative",
