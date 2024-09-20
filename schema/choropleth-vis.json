@@ -9,7 +9,7 @@
   },
   "transform": [
     {
-      "lookup": "properties.Region",
+      "lookup": "properties.STE_NAME16",
       "from": {
         "data": {
           "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/data/visitors-by-state-of-stay.csv"
@@ -18,18 +18,22 @@
         "fields": ["Arrivals"]
       }
     },
-    { "calculate": "datum.Arrivals + 0.1", "as": "Visitor Count" }
+    { "calculate": "datum.Arrivals", "as": "Visitor Count" }
   ],
   "mark": { "type": "geoshape" },
   "encoding": {
     "color": {
-      "field": "Visitor Count",
-      "type": "quantitative",
-      "scale": { "type": "log" }
-    },
+    "field": "Visitor Count",
+    "type": "quantitative",
+    "scale": {
+      "type": "threshold",
+      "domain": [5000, 7000, 10000, 50000, 160000, 170000, 230000],
+      "range": ["#fff7fb", "#ece7f2", "#d0d1e6", "#a6bddb", "#74a9cf", "#3690c0", "#0570b0", "#034e7b"]
+    }
+  },
     "tooltip": [
-      { "field": "properties.Region", "type": "nominal", "title": "Region" },
-      { "field": "Arrivals", "type": "quantitative", "title": "Arrivals" }
+      { "field": "properties.STE_NAME16", "type": "nominal", "title": "Region" },
+      { "field": "Visitor Count", "type": "quantitative", "title": "Number of Visitors" }
     ]
   }
 }
