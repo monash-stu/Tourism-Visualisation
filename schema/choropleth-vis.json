@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Visitors by State of Stay",
   "width": 800,
   "height": 400,
   "data": {
