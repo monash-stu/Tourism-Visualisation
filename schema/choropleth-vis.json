@@ -4,7 +4,7 @@
   "width": 800,
   "height": 400,
   "data": {
-    "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/STE_2016_AUST.json",
+    "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/STE_2016_AUST.json",
     "format": { "type": "topojson", "feature": "STE_2016_AUST" }
   },
   "transform": [
@@ -12,7 +12,7 @@
       "lookup": "properties.Region",
       "from": {
         "data": {
-          "url": "./data/visitors-by-state-of-stay.csv"
+          "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/data/visitors-by-state-of-stay.csv"
         },
         "key": "Region",
         "fields": ["Arrivals"]
