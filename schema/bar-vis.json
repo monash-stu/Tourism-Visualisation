@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/data/visitors-by-state-of-stay-trend.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "State",
+            "type": "nominal",
+            "title": "State"
+        },
+        "y": {
+            "aggregate": "sum",
+            "field": "Visitors",
+            "type": "quantitative",
+            "title": "Total Visitors"
+        },
+        "color": {
+            "field": "Year",
+            "type": "nominal",
+            "title": "Year"
+        },
+        "column": {
+            "field": "Year",
+            "type": "ordinal",
+            "title": "Year"
+        },
+        "tooltip": [
+            {"field": "State", "type": "nominal"},
+            {"field": "Year", "type": "ordinal"},
+            {"field": "Visitors", "type": "quantitative"}
+        ]
+    }
+}  
