@@ -43,7 +43,7 @@
 </head>
     
 <body>
-    <h1>Tourism in Australia</h1>
+    <h1>Latest Tourism in Australia</h1>
 
     <h3>Number of Visitors in 2024</h3>
     <div id="choropleth-vis"></div>
@@ -53,6 +53,15 @@
 
     <h3>Number of Visitors (2014-2024)</h3>
     <div id="bar-graph-vis"></div>
+
+    <h3>(bubble chart)</h3>
+    <div id="bubble-vis"></div>
+
+    <h3>(pie chart for expenditure between states in 2024)</h3>
+    <div id="pie-vis"></div>
+
+    <h3>Stacked area chart of visitors by reason (2014-2024)</h3>
+    <div id="area-vis"></div>
 
 
     <script type="text/javascript">
@@ -71,6 +80,24 @@
         //Bar graph
         var spec3 = "schema/bar-vis.json";
         vegaEmbed('#bar-graph-vis', spec3).then(function(result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        //Bubble chart
+        var spec4 = "schema/bubble-vis.json";
+        vegaEmbed('#bubble-vis', spec4).then(function(result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        //Pie chart
+        var spec5 = "schema/pie-vis.json";
+        vegaEmbed('#pie-vis', spec5).then(function(result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        //Area chart
+        var spec6 = "schema/area-vis.json";
+        vegaEmbed('#area-vis', spec6).then(function(result) {
             // Access the Vega view instance as result.view
         }).catch(console.error);
     </script>

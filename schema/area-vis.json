@@ -1,0 +1,37 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/data/reason-for-visit.csv",
+        "format": {"type": "csv"}
+    },
+    "mark": {"type": "area", "line": {"color": "white"}},
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "axis": {"labelAngle": 0},
+        "title": "Year"
+      },
+      "y": {
+        "field": "Visitors",
+        "type": "quantitative",
+        "stack": "normalize",
+        "title": "Percentage of Total Visitors"
+      },
+      "color": {
+        "field": "Reason",
+        "type": "nominal",
+        "title": "Reason for Visit",
+        "scale": {"scheme": "category20b"}
+      },
+      "tooltip": [
+        {"field": "Year", "type": "ordinal", "title": "Year"},
+        {"field": "Reason", "type": "nominal", "title": "Reason"},
+        {"field": "Visitors", "type": "quantitative", "title": "Number of Visitors"}
+      ]
+    },
+    "view": {
+      "stroke": null
+    }
+  }
+  
