@@ -35,6 +35,5 @@
             {"field": "Reason", "type": "nominal", "title": "Reason"},
             {"field": "Visitors", "type": "quantitative", "title": "Number of Visitors"}
         ]
-    },
-    "view": {"stroke": null}
+    }
 }

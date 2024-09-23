@@ -1,0 +1,34 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 400,
+    "data": {
+      "values": [
+        {"Year": 2024, "Category": "Permanent and Long-term Arrivals", "Arrivals": 119950},
+        {"Year": 2024, "Category": "Short-term Arrivals", "Arrivals": 1805310}
+      ]
+    },
+    "mark": {
+        "type": "arc",
+        "innerRadius": 50
+    },
+    "encoding": {
+        "theta": {
+            "field": "Arrivals",
+            "type": "quantitative",
+            "title": "Number of Arrivals"
+        },
+        "color": {
+            "field": "Category",
+            "type": "nominal",
+            "title": "Category of Arrival",
+            "scale": {
+            "range": ["#66c2a5", "#fc8d62"]
+            }
+        },
+        "tooltip": [
+            {"field": "Category", "type": "nominal", "title": "Arrival Category"},
+            {"field": "Arrivals", "type": "quantitative", "title": "Arrivals"}
+        ]
+    }
+}  
