@@ -9,25 +9,20 @@
     "mark": "bar",
     "encoding": {
         "x": {
-            "field": "State",
+            "field": "Year",
             "type": "nominal",
-            "title": "State"
+            "title": "Year"
         },
         "y": {
-            "aggregate": "sum",
             "field": "Visitors",
             "type": "quantitative",
             "title": "Total Visitors"
         },
+        "xOffset": {"field": "State"},
         "color": {
-            "field": "Year",
+            "field": "State",
             "type": "nominal",
-            "title": "Year"
-        },
-        "column": {
-            "field": "Year",
-            "type": "ordinal",
-            "title": "Year"
+            "title": "State"
         },
         "tooltip": [
             {"field": "State", "type": "nominal"},
