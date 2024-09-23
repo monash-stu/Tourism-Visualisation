@@ -54,15 +54,17 @@
     <h3>Number of Visitors (2014-2024)</h3>
     <div id="bar-graph-vis"></div>
 
-    <h3>(bubble chart)</h3>
+    <h3>(bubble chart for expenditure between states in 2024)</h3>
     <div id="bubble-vis"></div>
 
-    <h3>(pie chart for expenditure between states in 2024)</h3>
+    <h3>(pie chart)</h3>
     <div id="pie-vis"></div>
 
-    <h3>Stacked area chart of visitors by reason (2014-2024)</h3>
-    <div id="area-vis"></div>
+    <h3>Why People Visits Australia in 2024?</h3>
+    <div id="radial-vis"></div>
 
+    <p>Sources:</p><br>
+    <p>https://www.abs.gov.au/statistics/industry/tourism-and-transport/overseas-arrivals-and-departures-australia/jul-2024#data-downloads</p>
 
     <script type="text/javascript">
         //Choropleth
@@ -95,9 +97,9 @@
             // Access the Vega view instance as result.view
         }).catch(console.error);
 
-        //Area chart
-        var spec6 = "schema/area-vis.json";
-        vegaEmbed('#area-vis', spec6).then(function(result) {
+        //Radial plot
+        var spec6 = "schema/radial-vis.json";
+        vegaEmbed('#radial-vis', spec6).then(function(result) {
             // Access the Vega view instance as result.view
         }).catch(console.error);
     </script>
