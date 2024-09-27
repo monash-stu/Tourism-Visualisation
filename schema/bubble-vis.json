@@ -1,38 +1,41 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
-    "height": 400,
+    "height": 500,
     "data": {
         "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/data/expenditure-per-region.csv",
         "format": {"type": "csv"}
     },
-    "mark": "circle",
+    "mark": {"type": "circle", "opacity": 0.7, "stroke": "black", "strokeWidth": 1},
     "encoding": {
         "x": {
             "field": "State",
             "type": "nominal",
-            "title": "State"
+            "title": "State",
+            "axis": {"labelAngle": 0}
         },
         "y": {
             "field": "Expenditures",
             "type": "quantitative",
-            "title": "Total Expenditures (in thousands)"
+            "title": "Total Expenditures (in thousands)",
+            "scale": {"zero": true}
         },
         "size": {
             "field": "Visitors",
             "type": "quantitative",
-            "title": "Number of Visitors"
+            "title": "Number of Visitors",
+            "scale": {"range": [100, 1000]}
         },
         "color": {
             "field": "State",
             "type": "nominal",
-            "legend": {"title": "State"}
+            "legend": {"title": "State"},
+            "scale": {"scheme": "category20"}
         },
         "tooltip": [
             {"field": "State", "type": "nominal", "title": "State"},
-            {"field": "Visitors", "type": "quantitative", "title": "Visitors"},
-            {"field": "Expenditures", "type": "quantitative", "title": "Expenditures"}
+            {"field": "Visitors", "type": "quantitative", "title": "Number of Visitors"},
+            {"field": "Expenditures", "type": "quantitative", "title": "Expenditures (in thousands)"}
         ]
-        }
-  }
-  
+    }
+}
