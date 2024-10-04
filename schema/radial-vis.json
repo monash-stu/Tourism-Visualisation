@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 400,
-    "height": 400,
+    "width": 300,
+    "height": 300,
     "data": {
         "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/data/reason-for-visit.csv",
         "format": {"type": "csv"}
@@ -35,5 +35,8 @@
             {"field": "Reason", "type": "nominal", "title": "Reason"},
             {"field": "Visitors", "type": "quantitative", "title": "Number of Visitors"}
         ]
+    },
+    "config": {
+        "view": {"stroke": null}
     }
 }
