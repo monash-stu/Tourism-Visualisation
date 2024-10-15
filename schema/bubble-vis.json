@@ -7,6 +7,23 @@
         "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/data/expenditure-per-region.csv",
         "format": {"type": "csv"}
     },
+    "selection": {
+        "yearFilter": {
+            "type": "single",
+            "fields": ["Year"],
+            "bind": {
+                "input": "select",
+                "options": [2019, 2024],
+                "name": "Select Year: "
+            },
+            "init": {"Year": 2024}
+        }
+    },
+    "transform": [
+        {
+            "filter": "datum.Year == yearFilter.Year"
+        }
+    ],
     "mark": {"type": "circle", "opacity": 0.7, "stroke": "black", "strokeWidth": 1},
     "encoding": {
         "x": {
