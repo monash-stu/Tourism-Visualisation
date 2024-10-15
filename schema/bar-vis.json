@@ -3,31 +3,47 @@
     "width": 400,
     "height": 250,
     "data": {
-        "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/data/visitors-by-state-of-stay-trend.csv",
+      "url": "https://raw.githubusercontent.com/monash-stu/Tourism-Visualisation/main/data/visitors-by-state-of-stay-trend.csv",
       "format": {"type": "csv"}
     },
+    "selection": {
+        "yearFilter": {
+            "type": "single",
+            "fields": ["Year"],
+            "bind": {
+                "input": "select",
+                "options": [2014, 2019, 2024],
+                "name": "Select Year: "
+            },
+            "init": {"Year": 2024}
+        }
+    },
+    "transform": [
+        {
+            "filter": "datum.Year == yearFilter.Year"
+        }
+    ],
     "mark": "bar",
     "encoding": {
         "x": {
-            "field": "Year",
+            "field": "State",
             "type": "nominal",
-            "title": "Year"
+            "title": "State"
         },
         "y": {
             "field": "Visitors",
             "type": "quantitative",
             "title": "Total Visitors"
         },
-        "xOffset": {"field": "State"},
         "color": {
             "field": "State",
             "type": "nominal",
             "title": "State"
         },
         "tooltip": [
-            {"field": "State", "type": "nominal"},
-            {"field": "Year", "type": "ordinal"},
-            {"field": "Visitors", "type": "quantitative"}
+            {"field": "State", "type": "nominal", "title": "State"},
+            {"field": "Year", "type": "ordinal", "title": "Year"},
+            {"field": "Visitors", "type": "quantitative", "title": "Total Visitors"}
         ]
     }
 }  
