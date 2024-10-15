@@ -18,6 +18,15 @@
             line-height: 1.6;
         }
 
+        .wrapper {
+        max-width: 1200px; /* Set a maximum width */
+        margin: 0 auto; /* Center the wrapper */
+        padding: 20px; /* Add padding inside the wrapper */
+        background-color: #fff; /* Optional: add a background color */
+        border-radius: 8px; /* Optional: add rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visual separation */
+        }
+
         h1 {
             color: #34495e;
             text-align: center;
@@ -34,7 +43,7 @@
         p {
             text-align: center;
             margin: 20px 0;
-            font-size: 1em;
+            font-size: 1.1em;
             color: #454444;
         }
 
@@ -84,6 +93,7 @@
 </head>
 
 <body>
+    <div class="wrapper"> <!-- Added wrapper div -->
     <h1>Tourism in Australia 2024</h1>
 
     <div class="container">
@@ -99,9 +109,11 @@
 
     <p>
         Prior to the virus outbreak, the number of visitors was increasing steadily throughout the years. 
-        The number of visitors plummeted in 2020-2021 due to COVID-19, and while the recovery was significant, 
-        it had yet to reach pre-pandemic highs. Now, in 2024, tourism is more concentrated in the more populous
-        and coastal states, suggesting stronger infrastructure, urban attractions, and natural resources in these 
+        <strong>The number of visitors plummeted in 2020-2021 due to COVID-19</strong>, and while the recovery was significant, 
+        it had yet to reach pre-pandemic highs. Now, <strong>in 2024</strong>, tourism is more <strong>
+            concentrated in the more populous
+            and coastal states
+        </strong>, suggesting stronger infrastructure, urban attractions, and natural resources in these 
         areas compared to remote regions. While major states such as New South Wales dominate in sheer numbers, 
         smaller states have seen percentage growth, reflecting broader interest in niche or emerging tourist destinations.
     </p>
@@ -112,24 +124,22 @@
             <div id="bar-graph-vis"></div>
         </div>
         <div class="visualization">
-            <h3>Total expenditure amongst states in 2024</h3>
-            <!-- <label for="year-selector">Select Year:</label>
-            <select id="year-selector">
-                <option value="2019">2019</option>
-                <option value="2024">2024</option>
-            </select> -->
+            <h3>Total expenditure amongst states in 2019 & 2024</h3>
             <div id="bubble-vis"></div>
         </div>
     </div>
 
     <p>
-        In 2019, visitor numbers peaked across major states like New South Wales (NSW), Victoria (VIC), and 
-        Queensland (QLD). However, by 2024, most states see a decline. This drop is especially visible in 
+        <strong>In 2019</strong>, visitor numbers peaked across major states like <strong>
+            New South Wales (NSW), Victoria (VIC), and
+            Queensland (QLD)
+        </strong>. However, <strong>by 2024, most states see a decline</strong>. This drop is especially visible in 
         states like VIC and QLD, which further emphasizes that tourism has yet to be fully back to pre-pandemic highs. 
-        Following the trend in visitors, those same states with higher number of visitors are also leading in expenditures, 
+        Following the trend in visitors, those same <strong>states with higher number of visitors</strong> are also <strong>leading in expenditures</strong>, 
         with NSW having the highest expenditure at $11,809. Amongst these visitors, the vast majority of arrivals in 2024 are 
         short-term visitors. 
     </p>
+
     <div class="container">
         <div class="visualization">
             <h3>Categories of arrivals for 2024</h3>
@@ -142,9 +152,9 @@
     </div>
 
     <p>
-        As observed, most visitors arrive at Australia for the purpose of Holiday or Visiting friends/family. 
-        It can be concluded that the main drive for Australia's short term visits is Holiday. However, it is also important to note that
-        education and employment opportunities likely contribute to the smaller, but important, long-term arrival category.
+        As observed, <strong>most visitors</strong> arrive at Australia for the purpose of <strong>Holiday or Visiting friends/family.</strong> 
+        It can be concluded that the <strong>main drive</strong> for Australia's short term visits is <strong>Holiday</strong>. However, it is also important to note that
+        <i><strong>education and employment opportunities</strong></i> likely <i><strong>contribute to</strong></i> the smaller, but important, <i><strong>long-term arrival category</strong></i>.
     </p>
 
     <footer>
@@ -154,6 +164,7 @@
         </p>
         <p>Author: Evelynn Victoria<br>Date of Completion: Day, Date Month 2024</p>
     </footer>
+    </div> <!-- End of wrapper div -->
 
     <script type="text/javascript">
         //Choropleth
